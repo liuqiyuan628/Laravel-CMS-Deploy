@@ -37,16 +37,15 @@ Route::get('/projects',function(){
     foreach($projects as $key => $project)
     {
 
-        $projects[$key]['user'] =User::where('id',$project['user_id'])->first();
-        $projects[$key]['type'] =Type::where('id',$project['type_id'])->first();
-        
+        $projects[$key]['user'] = User::where('id', $project['user_id'])->first();
+        $projects[$key]['type'] = Type::where('id', $project['type_id'])->first();
 
         if($project['image'])
         {
-            $projects[$key]['image'] = env('APP_URL')."storage/".$project['image'];
+            $projects[$key]['image'] = env('APP_URL').'storage/'.$project['image'];
         }
-
     }
+
     return $projects;
     });
 
@@ -72,6 +71,20 @@ $educations = Education::orderBy('id')->get();
 return $educations;
 });
 
+Route::get('/skills',function(){
+    $skills = Skill::orderBy('id')->get();
+
+    foreach($skills as $key => $skill)
+    {
+
+        if($skill['image'])
+        {
+            $skills[$key]['image'] = env('APP_URL').'storage/'.$skill['image'];
+        }
+    }
+
+    return $skills;
+    });
 
 Route::get('/skills/profile/{skill?}',function(Skill $skill){ 
     $skills = Skill::orderBy('id')->get();
