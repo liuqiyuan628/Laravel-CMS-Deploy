@@ -24,6 +24,7 @@ All user acocunts will have the default password of "password".
 -   [Laravel](https://laravel.com/)
 
 Full tutorial URL: https://codeadam.ca/learning/php-cms-laravel.html
+T
 <a href="https://codeadam.ca">
 <img src="https://codeadam.ca/images/code-block.png" width="100">
 </a>
