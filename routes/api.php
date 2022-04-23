@@ -87,13 +87,11 @@ Route::get('/skills',function(){
     });
 
 Route::get('/skills/profile/{skill?}',function(Skill $skill){ 
-    $skills = Skill::orderBy('id')->get();
-
 
     if($skill['image']){
         $skill['image'] =env('APP_URL')."laravel/storage/app/public/".$skill['image'];
     }
 
 
-    return $skills;
+    return $skill;
     });
