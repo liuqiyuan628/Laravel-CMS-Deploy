@@ -21,7 +21,7 @@
             <tr>
                 <td>
                     @if ($project->image)
-                        <img src="{{asset('storage/'.$project->image)}}" width="200">
+                        <img src="{{asset('laravel/storage/app/public/'.$project->image)}}" width="200">
                     @endif
                 </td>
                 <td>{{$project->title}}</td>
@@ -32,14 +32,14 @@
                 </td>
                 <td>{{$project->type->title}}</td>
                 <td>{{$project->created_at->format('M j, Y')}}</td>
-                <td><a href="/console/projects/image/{{$project->id}}">Image</a></td>
-                <td><a href="/console/projects/edit/{{$project->id}}">Edit</a></td>
-                <td><a href="/console/projects/delete/{{$project->id}}">Delete</a></td>
+                <td><a href="{{url('')}}/console/projects/image/{{$project->id}}">Image</a></td>
+                <td><a href="{{url('')}}/console/projects/edit/{{$project->id}}">Edit</a></td>
+                <td><a href="{{url('')}}/console/projects/delete/{{$project->id}}">Delete</a></td>
             </tr>
         @endforeach
     </table>
 
-    <a href="/console/projects/add" class="w3-button w3-green">New Project</a>
+    <a href="{{url('')}}/console/projects/add" class="w3-button w3-green">New Project</a>
 
 </section>
 

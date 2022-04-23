@@ -4,7 +4,7 @@
 
 <section class="w3-padding">
 
-    <form method="post" action="/console/login" novalidate>
+    <form method="post" action="{{url('')}}/console/login" novalidate>
 
         @csrf
 

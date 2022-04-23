@@ -8,11 +8,11 @@
 
     <div class="w3-margin-bottom">
         @if($project->image)
-            <img src="{{asset('storage/'.$project->image)}}" width="200">
+            <img src="{{asset('laravel/storage/app/public/'.$project->image)}}" width="200">
         @endif
     </div>
 
-    <form method="post" action="/console/projects/image/{{$project->id}}" novalidate class="w3-margin-bottom" enctype="multipart/form-data">
+    <form method="post" action="{{url('')}}/console/projects/image/{{$project->id}}" novalidate class="w3-margin-bottom" enctype="multipart/form-data">
 
         @csrf
 
@@ -30,7 +30,7 @@
 
     </form>
 
-    <a href="/console/projects/list">Back to Project List</a>
+    <a href="{{url('')}}/console/projects/list">Back to Project List</a>
 
 </section>
 

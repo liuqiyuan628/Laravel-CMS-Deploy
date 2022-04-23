@@ -6,7 +6,7 @@
 
     <h2>Add Education</h2>
 
-    <form method="post" action="/console/educations/add" novalidate class="w3-margin-bottom">
+    <form method="post" action="{{url('')}}/console/educations/add" novalidate class="w3-margin-bottom">
 
         @csrf
 
@@ -66,7 +66,7 @@
 
     </form>
 
-    <a href="/console/educations/list">Back to Education List</a>
+    <a href="{{url('')}}/console/educations/list">Back to Education List</a>
 
 </section>
 

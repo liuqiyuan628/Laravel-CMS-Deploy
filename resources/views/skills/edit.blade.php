@@ -6,7 +6,7 @@
 
     <h2>Edit Skill</h2>
 
-    <form method="post" action="/console/skills/edit/{{$skill->id}}" novalidate class="w3-margin-bottom">
+    <form method="post" action="{{url('')}}/console/skills/edit/{{$skill->id}}" novalidate class="w3-margin-bottom">
 
         @csrf
 
@@ -39,7 +39,7 @@
 
     </form>
 
-    <a href="/console/skills/list">Back to Skill List</a>
+    <a href="{{url('')}}/console/skills/list">Back to Skill List</a>
 
 </section>
 

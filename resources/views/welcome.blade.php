@@ -21,7 +21,7 @@
     @endif
         @if ($skill->image)
                 <div class="w3-container w3-margin-top">
-                    <img src="{{asset('storage/'.$skill->image)}}" width="200">
+                    <img src="{{asset('laravel/storage/app/public/'.$skill->image)}}" width="200">
                 </div>
         @endif
     @endforeach
@@ -59,7 +59,7 @@
             
             @if ($project->image)
                 <div class="w3-container w3-margin-top">
-                    <img src="{{asset('storage/'.$project->image)}}" width="200">
+                    <img src="{{asset('laravel/storage/app/public/'.$project->image)}}" width="200">
                 </div>
             @endif
 
@@ -75,7 +75,7 @@
                     Type: {{$project->type->title}}
                 </p>
 
-                <a href="/project/{{$project->slug}}" class="w3-button w3-green">View Project Details</a>
+                <a href="{{url('')}}/project/{{$project->slug}}" class="w3-button w3-green">View Project Details</a>
 
             </div>
         

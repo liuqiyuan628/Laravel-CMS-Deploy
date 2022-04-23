@@ -42,7 +42,7 @@ Route::get('/projects',function(){
 
         if($project['image'])
         {
-            $projects[$key]['image'] = env('APP_URL').'storage/'.$project['image'];
+            $projects[$key]['image'] = env('APP_URL').'laravel/storage/app/public/'.$project['image'];
         }
     }
 
@@ -58,7 +58,7 @@ Route::get('/projects',function(){
     $project['user'] =User::where('id',$project['user_id'])->first();
     $project['type'] =Type::where('id',$project['type_id'])->first();
     if($project['image']){
-        $project['image'] =env('APP_URL')."storage/".$project['image'];
+        $project['image'] =env('APP_URL')."laravel/storage/app/public/".$project['image'];
     }
 
 
@@ -79,7 +79,7 @@ Route::get('/skills',function(){
 
         if($skill['image'])
         {
-            $skills[$key]['image'] = env('APP_URL').'storage/'.$skill['image'];
+            $skills[$key]['image'] = env('APP_URL').'laravel/storage/app/public/'.$skill['image'];
         }
     }
 
@@ -91,7 +91,7 @@ Route::get('/skills/profile/{skill?}',function(Skill $skill){
 
 
     if($skill['image']){
-        $skill['image'] =env('APP_URL')."storage/".$skill['image'];
+        $skill['image'] =env('APP_URL')."laravel/storage/app/public/".$skill['image'];
     }
 
 

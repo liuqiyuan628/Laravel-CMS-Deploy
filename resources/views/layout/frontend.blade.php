@@ -7,9 +7,9 @@
     <title>My Portfolio | {{$title}}    </title>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{{url('app.css')}}">
+    <link rel="stylesheet" href="{{url('')}}/{{url('app.css')}}">
 
-    <script src="{{url('app.js')}}"></script>
+    <script src="{{url('')}}/{{url('app.js')}}"></script>
     
 </head>
 <body>
@@ -37,10 +37,10 @@
 
     @if (Auth::check())
         You are logged in as {{auth()->user()->first}} {{auth()->user()->last}} | 
-        <a href="/console/logout">Log Out</a> | 
-        <a href="/console/dashboard">Dashboard</a>
+        <a href="{{url('')}}/console/logout">Log Out</a> | 
+        <a href="{{url('')}}/console/dashboard">Dashboard</a>
     @else
-        <a href="/console/login">Login</a>
+        <a href="{{url('')}}/console/login">Login</a>
     @endif
 
 </footer>

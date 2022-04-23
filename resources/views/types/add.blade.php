@@ -6,7 +6,7 @@
 
     <h2>Add Type</h2>
 
-    <form method="post" action="/console/types/add" novalidate class="w3-margin-bottom">
+    <form method="post" action="{{url('')}}/console/types/add" novalidate class="w3-margin-bottom">
 
         @csrf
 
@@ -24,7 +24,7 @@
 
     </form>
 
-    <a href="/console/types/list">Back to Type List</a>
+    <a href="{{url('')}}/console/types/list">Back to Type List</a>
 
 </section>
 

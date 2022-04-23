@@ -8,11 +8,11 @@
 
     <div class="w3-margin-bottom">
         @if($skill->image)
-            <img src="{{asset('storage/'.$skill->image)}}" width="200">
+            <img src="{{asset('laravel/storage/app/public/'.$skill->image)}}" width="200">
         @endif
     </div>
 
-    <form method="post" action="/console/skills/image/{{$skill->id}}" novalidate class="w3-margin-bottom" enctype="multipart/form-data">
+    <form method="post" action="{{url('')}}/console/skills/image/{{$skill->id}}" novalidate class="w3-margin-bottom" enctype="multipart/form-data">
 
         @csrf
 
@@ -30,7 +30,7 @@
 
     </form>
 
-    <a href="/console/skills/list">Back to Skill List</a>
+    <a href="{{url('')}}/console/skills/list">Back to Skill List</a>
 
 </section>
 

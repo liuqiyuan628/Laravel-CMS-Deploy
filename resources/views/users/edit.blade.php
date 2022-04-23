@@ -6,7 +6,7 @@
 
     <h2>Edit User</h2>
 
-    <form method="post" action="/console/users/edit/{{$user->id}}" novalidate class="w3-margin-bottom">
+    <form method="post" action="{{url('')}}/console/users/edit/{{$user->id}}" novalidate class="w3-margin-bottom">
 
         @csrf
 
@@ -54,7 +54,7 @@
 
     </form>
 
-    <a href="/console/users/list">Back to User List</a>
+    <a href="{{url('')}}/console/users/list">Back to User List</a>
 
 </section>
 

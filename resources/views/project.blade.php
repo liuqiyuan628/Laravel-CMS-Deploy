@@ -9,7 +9,7 @@
 
     @if ($project->image)
         <div class="w3-margin-top">
-            <img src="{{asset('storage/'.$project->image)}}" width="400">
+            <img src="{{asset('laravel/storage/app/public/'.$project->image)}}" width="400">
         </div>
     @endif
 
@@ -25,7 +25,7 @@
         Type: {{$project->type->title}}
     </p>
 
-    <a href="/">Back to Home</a>
+    <a href="{{url('')}}/">Back to Home</a>
 
 </section>
 

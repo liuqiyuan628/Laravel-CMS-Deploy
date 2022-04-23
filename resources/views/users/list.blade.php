@@ -19,13 +19,13 @@
                 <td>{{$user->first}} {{$user->last}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->created_at->format('M j, Y')}}</td>
-                <td><a href="/console/users/edit/{{$user->id}}">Edit</a></td>
-                <td><a href="/console/users/delete/{{$user->id}}">Delete</a></td>
+                <td><a href="{{url('')}}/console/users/edit/{{$user->id}}">Edit</a></td>
+                <td><a href="{{url('')}}/console/users/delete/{{$user->id}}">Delete</a></td>
             </tr>
         <?php endforeach; ?>
     </table>
 
-    <a href="/console/users/add" class="w3-button w3-green">New User</a>
+    <a href="{{url('')}}/console/users/add" class="w3-button w3-green">New User</a>
 
 </section>
 

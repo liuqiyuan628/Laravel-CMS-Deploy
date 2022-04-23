@@ -6,7 +6,7 @@
 
     <h2>Add Project</h2>
 
-    <form method="post" action="/console/projects/add" novalidate class="w3-margin-bottom">
+    <form method="post" action="{{url('')}}/console/projects/add" novalidate class="w3-margin-bottom">
 
         @csrf
 
@@ -71,7 +71,7 @@
 
     </form>
 
-    <a href="/console/projects/list">Back to Project List</a>
+    <a href="{{url('')}}/console/projects/list">Back to Project List</a>
 
 </section>
 

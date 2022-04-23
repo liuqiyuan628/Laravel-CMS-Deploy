@@ -25,13 +25,13 @@
                 <td>{{$education->start_year}}</td>
                 <td>{{$education->end_year}}</td>
 
-                <td><a href="/console/educations/edit/{{$education->id}}">Edit</a></td>
-                <td><a href="/console/educations/delete/{{$education->id}}">Delete</a></td>
+                <td><a href="{{url('')}}/console/educations/edit/{{$education->id}}">Edit</a></td>
+                <td><a href="{{url('')}}/console/educations/delete/{{$education->id}}">Delete</a></td>
             </tr>
         @endforeach
     </table>
 
-    <a href="/console/educations/add" class="w3-button w3-green">New Education</a>
+    <a href="{{url('')}}/console/educations/add" class="w3-button w3-green">New Education</a>
 
 </section>
 
